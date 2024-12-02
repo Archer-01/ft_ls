@@ -1,0 +1,15 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# Executables
+*.out
+ft_ls
+
+# Debug files
+*.dSYM/
