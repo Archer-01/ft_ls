@@ -5,7 +5,7 @@ $(NAME): $(OBJ) $(LIBFT)
 $(LIBFT):
 	$(MAKE) --directory=$(@D) --silent all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re format
 
 all: $(NAME)
 
@@ -19,4 +19,7 @@ fclean: clean
 
 re: fclean all
 
-.SILENT: clean fclean
+format:
+	$(FORMAT) $(FORMATFLAGS) $(SRC)
+
+.SILENT: clean fclean format

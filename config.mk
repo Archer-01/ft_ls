@@ -5,6 +5,8 @@ OBJ := $(SRC:.c=.o)
 
 LIBFT := libft/libft.a
 
-CC := gcc
+CC     := gcc
+FORMAT := clang-format
 
-CFLAGS := -Wall -Wextra -Werror -fanalyzer
+CFLAGS      := -Wall -Wextra -Werror -fanalyzer
+FORMATFLAGS := -i

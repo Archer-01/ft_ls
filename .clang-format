@@ -1,0 +1,23 @@
+Language: Cpp
+
+AlignAfterOpenBracket: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: true
+  AfterStruct: true
+  AfterUnion: false
+  BeforeElse: false
+  IndentBraces: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Custom
+ColumnLimit: 80
+IndentCaseBlocks: false
+IndentWidth: 4
+PointerBindsToType: false
+SortIncludes: true
+TabWidth: 4
+UseTab: Always
