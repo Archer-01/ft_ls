@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "libft/libft.h"
 
 int main(void) {
-	puts("Hello, World!");
+	ft_putstr("Hello, World!\n");
 	return 0;
 }
