@@ -1,7 +1,9 @@
 #include "libft/libft.h"
 #include <dirent.h>
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
 
@@ -16,7 +18,8 @@ int main(int argc, char **argv)
 	DIR *dirp = opendir(path);
 
 	if (dirp == NULL) {
-		perror("opendir");
+		const char *err = strerror(errno);
+		ft_fprintf(STDERR_FILENO, "ft_ls: cannot access '%s': %s\n", path, err);
 		exit(EXIT_FAILURE);
 	}
 
