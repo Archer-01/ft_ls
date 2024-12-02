@@ -1,4 +1,4 @@
-name: Build project
+name: Build project & Check formatting
 
 on: [push]
 
@@ -12,3 +12,6 @@ jobs:
 
       - name: Build
         run: make
+
+      - name: Check formatting
+        run: make format && git diff --quiet
