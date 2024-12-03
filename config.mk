@@ -8,5 +8,11 @@ LIBFT := libft/libft.a
 CC     := gcc
 FORMAT := clang-format
 
-CFLAGS      := -Wall -Wextra -Werror -fanalyzer
+CFLAGS      := -Wall -Wextra -Werror
 FORMATFLAGS := -i
+
+ifdef DEBUG
+	CFLAGS += -Og -g
+else
+	CFLAGS += -fanalyzer
+endif
