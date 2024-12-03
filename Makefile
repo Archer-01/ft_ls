@@ -5,7 +5,7 @@ $(NAME): $(OBJ) $(LIBFT)
 $(LIBFT):
 	$(MAKE) --directory=$(@D) --silent all
 
-.PHONY: all clean fclean re format
+.PHONY: all clean fclean re format leaks
 
 all: $(NAME)
 
@@ -21,5 +21,8 @@ re: fclean all
 
 format:
 	$(FORMAT) $(FORMATFLAGS) $(SRC)
+
+leaks:
+	$(LEAKS) $(LEAKSFLAGS) ./$(NAME) ${ARGS}
 
 .SILENT: clean fclean format
